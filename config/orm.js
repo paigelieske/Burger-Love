@@ -1,4 +1,4 @@
-var connection = require("./config/connection.js");
+var connection = require("../config/connection.js");
 
 var orm ={
     all: function(input, cb) {
