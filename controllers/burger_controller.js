@@ -2,12 +2,12 @@ var express = require("express");
 
 var router = express.Router();
 
-var burger = require("../models/burger.js");
+var burger = require("../models/burger_model.js");
 
 router.get("/", function(req, res) {
     burger.all(function(data) {
         var handlebars = {
-            burgers: data
+            burgers_table: data
         };
         console.log(handlebars);
         res.render("index", handlebars);

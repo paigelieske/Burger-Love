@@ -3,7 +3,7 @@
 <h2>Burgers I Want</h2>
 
 <ul>
-    {{#each burgers}}
+    {{#each burgers_table}}
     {{#unless devoured}}
     <p>{{this.burger_name}}</p>
     {{/unless}}
@@ -13,7 +13,7 @@
 <h2>Burgers I Ate</h2>
 
 <ul>
-    {{#each burgers}}
+    {{#each burgers_table}}
     {{#if devoured}}
     <p>{{this.burger_name}}</p>
     {{/if}}
