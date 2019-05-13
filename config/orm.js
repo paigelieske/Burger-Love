@@ -8,17 +8,17 @@ var orm ={
         });
     },
     insert: function(table, cols, vals, cb) {
-        connection.query("INSERT INTO burgers_table (burger_name) VALUES (cheeseburger);", function (err,result) {
+        connection.query("INSERT INTO " + table + "(" + cols + ")" + "VALUES" + "(" + vals + ");", function (err,result) {
             if(err) throw err;
             cb(result);
         })
     },
-    change: function(table, objColVals, status, cb) {
-        connection.query("UPDATE burgers_table SET devoured = true WHERE id = 1;", function (err, results) {
-            if (err) throw err;
-            cb(result);
-        })
-    }
+    // change: function(table, objColVals, status, cb) {
+    //     connection.query("UPDATE burgers_table SET devoured = true WHERE id = 1;", function (err, result) {
+    //         if (err) throw err;
+    //         cb(result);
+    //     })
+    // }
 }
 
 module.exports = orm;

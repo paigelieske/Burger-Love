@@ -1,6 +1,8 @@
+<img src="assets/burgerlove.jpg" alt="burger" />
+
 <h1>Burger Love!</h1>
 
-<h2>Burgers I Want</h2>
+<h2 class="want">Burgers I Want</h2>
 
 <ul>
     {{#each burgers_table}}
@@ -10,7 +12,7 @@
     {{/each}}
 </ul>
 
-<h2>Burgers I Ate</h2>
+<h2 class="ate">Burgers I Ate</h2>
 
 <ul>
     {{#each burgers_table}}
@@ -20,13 +22,12 @@
     {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+<h2 class="add">Add a Burger</h2>
 
+<form class="add-burger">
     <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+        <label for="burgerName">Burger Name:</label>
+        <input type="text" id="burgerName" name="name">
     </div>
-
     <button type="submit">Add Burger</button>
 </form>
