@@ -11,8 +11,8 @@ var burger = {
             cb(res);
         });
     },
-    change: function(objColVals, status, cb) {
-        orm.change("burgers_table", objColVals, status, function(res) {
+    change: function(objColVals, condition, cb) {
+        orm.change("burgers_table", objColVals, condition, function(res) {
             cb(res);
         });
     }

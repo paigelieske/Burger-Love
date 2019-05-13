@@ -1,10 +1,30 @@
 $(function() {
-$(".add-burger").on("submit", function(event) {
+
+$(".eat-me").on("click", function(event) {
+  var id = $(this).data("id");
+  console.log(id);
+  var newStatus = {
+    devoured: true
+  };
+  $.ajax("/api/burgers" + id, {
+    type: "PUT",
+    data: newStatus
+  }).then(
+    function() {
+      console.log("burger status changed to " + newStatus);
+      location.reload();
+    }
+  );
+});
+
+$(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
+    console.log("button pressed");
     event.preventDefault();
 
     var newBurger = {
       burger_name: $("#burgerName").val().trim(),
+      devoured: false
     };
 
     // Send the POST request.

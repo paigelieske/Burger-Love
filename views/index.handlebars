@@ -7,7 +7,11 @@
 <ul>
     {{#each burgers_table}}
     {{#unless devoured}}
-    <p>{{this.burger_name}}</p>
+    <p>
+        <span>#{{this.id}} {{this.burger_name}}
+            <button type="submit" class="eat-me" data-id="{{this.id}}" data-newstatus="{{true}}">Devour it!</button>
+        </span>
+    </p>
     {{/unless}}
     {{/each}}
 </ul>
@@ -24,10 +28,12 @@
 
 <h2 class="add">Add a Burger</h2>
 
-<form class="add-burger">
+<form class="create-form">
+
     <div class="form-group">
         <label for="burgerName">Burger Name:</label>
         <input type="text" id="burgerName" name="name">
     </div>
-    <button type="submit">Add Burger</button>
+
+    <button type="submit" id="submit">Submit</button>
 </form>
