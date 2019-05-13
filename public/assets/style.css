@@ -14,3 +14,20 @@ h2 {
     color: #F45664;
 }
 
+.add {
+    text-align: center;
+    clear: both;
+}
+
+.want {
+    float: left;
+    margin-left: 10%;
+}
+
+.ate {
+    float: right;
+    margin-right: 10%;
+}
+
+
+
