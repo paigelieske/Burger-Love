@@ -1,3 +1,7 @@
+body {
+    background: lightgrey;
+}
+
 img {
     display: block;
     width: 15%;
@@ -21,12 +25,22 @@ h2 {
 
 .want {
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .ate {
     float: right;
-    margin-right: 10%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.want-header {
+    margin-left: 15%;
+}
+
+#submit, .eat-me {
+    background: orange;
+    color: white;
 }
 
 

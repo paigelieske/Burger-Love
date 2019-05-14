@@ -1,12 +1,17 @@
 $(function() {
 
 $(".eat-me").on("click", function(event) {
+  console.log("eat-me pressed");
+  event.preventDefault();
+
   var id = $(this).data("id");
   console.log(id);
+
   var newStatus = {
     devoured: true
   };
-  $.ajax("/api/burgers" + id, {
+  console.log(newStatus);
+  $.ajax("/api/burgers/" + id, {
     type: "PUT",
     data: newStatus
   }).then(

@@ -3,13 +3,13 @@
 <h1>Burger Love!</h1>
 
 <div class="want">
-    <h2>Burgers I Want</h2>
+    <h2 class="want-header">Burgers I Want</h2>
     <ul>
         {{#each burgers_table}}
         {{#unless devoured}}
         <p>
             <span>#{{this.id}} {{this.burger_name}}
-                <button type="submit" class="eat-me" data-id="{{this.id}}" data-newstatus="{{true}}">Devour it!</button>
+                <button type="submit" class="eat-me" data-id="{{this.id}}" data-newstatus="{{true}}">Eat Me!</button>
             </span>
         </p>
         {{/unless}}
@@ -18,14 +18,18 @@
 </div>
 
 <div class="ate">
-    <h2>Burgers I Ate</h2>
-    <ul>
-        {{#each burgers_table}}
-        {{#if devoured}}
-        <p>{{this.burger_name}}</p>
-        {{/if}}
-        {{/each}}
-    </ul>
+    <h2 class="ate-header">Burgers I Ate</h2>
+    <div class="ate-div">
+        <ul>
+            {{#each burgers_table}}
+            {{#if devoured}}
+            <p>
+                <span>#{{this.id}} {{this.burger_name}}</span>
+            </p>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
 </div>
 
 <div class="add">
