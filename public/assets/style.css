@@ -38,6 +38,10 @@ h2 {
     margin-left: 15%;
 }
 
+.ate-header {
+    text-align: center;
+}
+
 #submit, .eat-me {
     background: orange;
     color: white;
